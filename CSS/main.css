@@ -1,7 +1,7 @@
 /* Breakpoints */
 /* Fonts */
 .navigation {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   position: relative;
   width: 100%;
   padding: 0;
@@ -18,7 +18,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px;
+  padding: 3px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
   text-decoration: none;
 }
 
@@ -40,10 +42,11 @@
 .navigation .menu-icon .navicon {
   background: white;
   display: flex;
-  height: 2px;
+  height: 4px;
   position: relative;
   transition: background 0.2s ease-out;
-  width: 18px;
+  width: 30px;
+  border-radius: 10px;
 }
 
 .navigation .menu-icon .navicon:before,
@@ -55,14 +58,15 @@
   position: absolute;
   transition: all 0.2s ease-out;
   width: 100%;
+  border-radius: 10px;
 }
 
 .navigation .menu-icon .navicon:before {
-  top: 5px;
+  top: 10px;
 }
 
 .navigation .menu-icon .navicon:after {
-  top: -5px;
+  top: -10px;
 }
 
 .navigation .menu-btn {
@@ -177,6 +181,10 @@
   margin-top: 20px;
   padding: 10px;
   text-align: center;
+}
+.about__text .bi {
+  font-size: 4rem;
+  transform: rotate(45deg);
 }
 
 .contact {
