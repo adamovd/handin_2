@@ -1,0 +1,31 @@
+@use "navigation";
+@use "variables" as var;
+.hero {
+  &__image {
+    background-image: url(/assets/negative-space-black-forest-dawn.jpg);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  &__text {
+    text-align: center;
+    position: absolute;
+    font-family: var.$primaryfont;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+}
+
+#arrow_dwn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

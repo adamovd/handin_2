@@ -1,0 +1,15 @@
+@use "variables" as var;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  margin-top: 10px;
+  text-align: start;
+  font-family: var.$primaryfont;
+  li {
+    list-style: none;
+    color: white;
+  }
+}
