@@ -23,30 +23,29 @@
     <title>Document</title>
   </head>
   <body>
-    <main class="hero">
-      <span class="hero__image">
+    <main class="start" id="home">
+      <span class="start__image">
         <nav class="navigation">
           <div></div>
-          <input id="menu-toggle" type="checkbox" />
-          <label class="menu-button-container" for="menu-toggle">
-            <div class="menu-button"></div>
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn">
+            <span class="navicon"></span>
           </label>
           <ul class="menu">
-            <li><a href="#">Hem</a></li>
-            <li><a href="#">Om</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="#work">Our Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <article class="hero__text">
-          <h1>Welcome to nature</h1>
+        <article class="start__text">
+          <h3>Welcome to nature</h3>
           <p>A journey through time and sheep</p>
           <p>To see how ...cotton ... is mage, made I mean...</p>
         </article>
-        <i class="bi bi-arrow-down-circle-fill" id="arrow_dwn"></i>
       </span>
     </main>
     <section class="about" id="about">
-      <h1 class="about__header">Träffa laget</h1>
+      <h3 class="about__header">Träffa laget</h3>
 
       <article class="about__member">
         <h5>Rakib</h5>
@@ -56,8 +55,8 @@
           alt="Rakib"
         />
         <div class="about__text">
-          <i class="bi bi-quote"></i>
           <p>
+            <i class="bi bi-quote" id="quote"></i>
             Rakib är vår vassaste node-utvecklare och håller ständigt ett öga på
             nya tekniker
           </p>
@@ -72,8 +71,8 @@
           alt="Alexandra"
         />
         <div class="about__text">
-          <i class="bi bi-quote"></i>
           <p>
+            <i class="bi bi-quote" id="quote"></i>
             Alexandra håller reda på alla överallt och ser till att det flyter.
           </p>
         </div>
@@ -87,8 +86,8 @@
           alt="Lasse"
         />
         <div class="about__text">
-          <i class="bi bi-quote"></i>
           <p>
+            <i class="bi bi-quote" id="quote"></i>
             Gör övriga saker... mestadels...
           </p>
         </div>
@@ -102,17 +101,12 @@
           alt="Sebastian"
         />
         <div class="about__text">
-          <i class="bi bi-quote"></i>
           <p>
+            <i class="bi bi-quote" id="quote"></i>
             En av våra utbildare som har stor erfarenhet av ganska många saker.
           </p>
         </div>
       </article>
-      <i
-        href="#contact"
-        class="bi bi-arrow-down-circle-fill"
-        id="arrow_dwn"
-      ></i>
     </section>
     <footer class="contact" id="contact">
       <section class="contact__adress">
