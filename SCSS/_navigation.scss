@@ -4,40 +4,41 @@
 .navigation {
   background-color: rgba(255, 255, 255, 0.1);
   position: relative;
+  height: 8vh;
   width: 100%;
   padding: 0;
-}
 
-.navigation ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-}
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
 
-.navigation li a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3px;
-  font-family: var.$primaryfont;
-  color: var.$primarycolor;
-  text-decoration: none;
-}
+  li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+    font-family: var.$primaryfont;
+    color: var.$primarycolor;
+    text-decoration: none;
+  }
 
-.navigation .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
 
-.navigation .menu-icon {
-  cursor: pointer;
-  display: flex;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
+  .menu-icon {
+    cursor: pointer;
+    display: flex;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
 }
 
 .navigation .menu-icon .navicon {
@@ -94,24 +95,30 @@
 .navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
-
-@media (min-width: 48em) {
+@include mixins.for-size(tablet) {
   .navigation {
     background-color: transparent;
-  }
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: end;
 
-  .navigation li {
-    float: left;
-  }
-  .navigation li a {
-    padding: 20px 30px;
-  }
-  .navigation .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .navigation .menu-icon {
-    display: none;
+    .menu {
+      display: flex;
+      flex-direction: row;
+      max-height: none;
+      padding: 20px;
+    }
+
+    a {
+      margin-left: 20px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .menu-icon {
+      display: none;
+    }
   }
 }
