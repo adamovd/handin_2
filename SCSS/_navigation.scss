@@ -96,6 +96,10 @@
 }
 
 @media (min-width: 48em) {
+  .navigation {
+    background-color: transparent;
+  }
+
   .navigation li {
     float: left;
   }
