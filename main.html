@@ -14,7 +14,7 @@
   <body>
     <main>
       <section class="start" id="home">
-        <header class="navigation">
+        <nav class="navigation">
           <input class="menu-btn" type="checkbox" id="menu-btn" />
           <label class="menu-icon" for="menu-btn">
             <span class="navicon"></span>
@@ -24,11 +24,11 @@
             <li><a href="#about">Om</a></li>
             <li><a href="#contact">Kontakt</a></li>
           </ul>
-        </header>
+        </nav>
         <article class="start__text">
           <h1>Welcome to nature</h1>
-          <h3>A journey through time and sheep</h3>
-          <h3>To see how ...cotton ... is mage, made I mean...</h3>
+          <p>A journey through time and sheep</p>
+          <p>To see how ...cotton ... is mage, made I mean...</p>
           <a href="#about" class="arrow_dwn">
             <i class="fa-sharp fa-solid fa-circle-down"></i>
           </a>
@@ -38,14 +38,14 @@
       <section class="about" id="about">
         <h3 class="about__header">Träffa laget</h3>
 
-        <section class="about__member">
+        <section class="member">
           <h5>Rakib</h5>
           <img
-            class="about__img"
+            class="member__img"
             src="/assets/profiles/Rakib_Square.png"
             alt="Rakib"
           />
-          <article class="about__text">
+          <article class="member__text">
             <span>
               <i class="fa-solid fa-quote-right"></i>
               Rakib är vår vassaste node-utvecklare och håller ständigt ett öga
@@ -54,14 +54,14 @@
           </article>
         </section>
 
-        <section class="about__member">
+        <section class="member">
           <h5>Alexandra</h5>
           <img
-            class="about__img"
+            class="member__img"
             src="/assets/profiles/Alexandra_Square.png"
             alt="Alexandra"
           />
-          <article class="about__text">
+          <article class="member__text">
             <span>
               <i class="fa-solid fa-quote-right"></i>
               Alexandra håller reda på alla överallt och ser till att det
@@ -70,14 +70,14 @@
           </article>
         </section>
 
-        <section class="about__member">
+        <section class="member">
           <h5>Lasse</h5>
           <img
-            class="about__img"
+            class="member__img"
             src="/assets/profiles/NoPerson_Square.png"
             alt="Lasse"
           />
-          <article class="about__text">
+          <article class="member__text">
             <span>
               <i class="fa-solid fa-quote-right"></i>
               Gör övriga saker... mestadels...
@@ -85,14 +85,14 @@
           </article>
         </section>
 
-        <section class="about__member">
+        <section class="member">
           <h5>Sebastian</h5>
           <img
-            class="about__img"
+            class="member__img"
             src="/assets/profiles/Sebastian_Square.png"
             alt="Sebastian"
           />
-          <article class="about__text">
+          <article class="member__text">
             <span>
               <i class="fa-solid fa-quote-right"></i>
               En av våra utbildare som har stor erfarenhet av ganska många
@@ -100,38 +100,42 @@
             </span>
           </article>
         </section>
+        <a href="#contact" class="arrow_dwn">
+          <i class="fa-sharp fa-solid fa-circle-down"></i>
+        </a>
       </section>
+
+      <footer class="contact" id="contact">
+        <section class="contact__adress">
+          <ul>
+            <li>Tegel Consulting AB</li>
+            <li>Agatvägen 18</li>
+            <li>168 80 Bromma</li>
+          </ul>
+        </section>
+        <section class="contact__reach">
+          <ul>
+            <li>info at tegelconsulting.se</li>
+            <li>070-123 456 78</li>
+          </ul>
+        </section>
+        <section class="contact__social">
+          <ul>
+            <li href="https://instagram.com">
+              <i class="fa-brands fa-instagram"></i>
+              Instagram
+            </li>
+            <li href="https://twitter.com">
+              <i class="fa-brands fa-twitter"></i>
+              Twitter
+            </li>
+            <li href="https://facebook.com">
+              <i class="fa-brands fa-facebook-f"></i>
+              Facebook
+            </li>
+          </ul>
+        </section>
+      </footer>
     </main>
-    <footer class="contact" id="contact">
-      <section class="contact__adress">
-        <ul>
-          <li>Tegel Consulting AB</li>
-          <li>Agatvägen 18</li>
-          <li>168 80 Bromma</li>
-        </ul>
-      </section>
-      <section class="contact__reach">
-        <ul>
-          <li>info at tegelconsulting.se</li>
-          <li>070-123 456 78</li>
-        </ul>
-      </section>
-      <section class="contact__social">
-        <ul>
-          <li href="https://instagram.com">
-            <i class="bi bi-instagram"></i>
-            Instagram
-          </li>
-          <li href="https://twitter.com">
-            <i class="bi bi-twitter"></i>
-            Twitter
-          </li>
-          <li href="https://facebook.com">
-            <i class="bi bi-facebook"></i>
-            Facebook
-          </li>
-        </ul>
-      </section>
-    </footer>
   </body>
 </html>

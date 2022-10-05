@@ -2,8 +2,14 @@
 @use "mixins";
 @use "variables" as var;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  scroll-behavior: smooth;
+  font-size: 13pt;
 }
 
 .start {
@@ -16,16 +22,15 @@ body {
     text-align: center;
     font-family: var.$primaryfont;
     margin-top: 20vh;
-    padding: 0% 25%;
-    color: rgb(255, 255, 255);
+    color: var.$primarycolor;
 
-    h3,
+    h1,
     p {
       padding: 20px;
     }
   }
   .arrow_dwn {
-    margin-top: 20vh;
-    @include mixins.arrow(white);
+    margin-top: 25vh;
+    @include mixins.arrow(var.$primarycolor);
   }
 }
