@@ -54,5 +54,16 @@ body {
         margin-top: 25vh;
       }
     }
+    @include mixins.for-size(desktop) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      .arrow_dwn {
+        margin-top: 30vh;
+      }
+    }
   }
 }
