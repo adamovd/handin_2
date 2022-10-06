@@ -1,0 +1,36 @@
+@use "navigation";
+@use "mixins";
+@use "variables" as var;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-size: 13pt;
+}
+
+.start {
+  @include mixins.start_img;
+  height: 100vh;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: var.$primaryfont;
+    margin-top: 20vh;
+    color: var.$primarycolor;
+
+    h1,
+    p {
+      padding: 20px;
+    }
+  }
+  .arrow_dwn {
+    margin-top: 20vh;
+    @include mixins.arrow(var.$primarycolor);
+  }
+}

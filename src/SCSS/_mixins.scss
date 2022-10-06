@@ -1,0 +1,25 @@
+@use "variables" as var;
+
+@mixin for-size($size) {
+  @if $size == tablet {
+    @media screen and (min-width: var.$tablet) {
+      @content;
+    }
+  }
+}
+
+@mixin start_img {
+  background-image: url("../assets/negative-space-black-forest-dawn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin arrow($color) {
+  font-size: 1.2rem;
+  color: $color;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

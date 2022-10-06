@@ -1,0 +1,123 @@
+@use "mixins";
+@use "variables" as var;
+
+.navigation {
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+  height: 8vh;
+  width: 100%;
+  padding: 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+    font-family: var.$primaryfont;
+    color: var.$primarycolor;
+    text-decoration: none;
+  }
+
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    display: flex;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+}
+
+.navigation .menu-icon .navicon {
+  background: var.$primarycolor;
+  display: flex;
+  height: 4px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 30px;
+  border-radius: 10px;
+}
+
+.navigation .menu-icon .navicon:before,
+.navigation .menu-icon .navicon:after {
+  background: var.$primarycolor;
+  content: "";
+  display: flex;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.navigation .menu-icon .navicon:before {
+  top: 10px;
+}
+
+.navigation .menu-icon .navicon:after {
+  top: -10px;
+}
+
+.navigation .menu-btn {
+  display: none;
+}
+
+.navigation .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+@include mixins.for-size(tablet) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      max-height: none;
+      padding: 20px;
+    }
+
+    a {
+      margin-left: 20px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .menu-icon {
+      display: none;
+    }
+  }
+}

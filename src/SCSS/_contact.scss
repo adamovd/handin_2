@@ -1,0 +1,42 @@
+@use "variables" as var;
+@use "mixins";
+
+.contact {
+  @include mixins.for-size(tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  display: flex;
+  flex-direction: column;
+  background-color: var.$secondarycolor;
+  padding: 30px 30px;
+  margin-top: 30px;
+  font-family: var.$primaryfont;
+
+  section {
+    display: flex;
+    width: 100%;
+  }
+
+  li {
+    text-align: start;
+    list-style: none;
+    color: var.$primarycolor;
+    padding: 10px;
+
+    .fa-brands {
+      margin-right: 10px;
+    }
+  }
+  &__social {
+    a {
+      color: var.$primarycolor;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
